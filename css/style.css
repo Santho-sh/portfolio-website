@@ -84,9 +84,29 @@ header a:hover{
     font-size: 3rem;
 }
 
-.resume {
+.resume{
     margin-top: 1rem;
     width: 7rem;
     background-color: var(--nav-background);
     border-color: var(--fav-color);
+}
+
+/* socialmedia links */
+
+.social__links{
+    padding: 3% 10%;
+    margin: .7rem;
+
+}
+
+.social__links a{
+    transition: all .5s ease 0s;
+    font-size: 15px;
+    color: var(--font-color-one);
+    cursor: pointer;
+    padding-right: 10px;
+}
+
+.social__links a:hover{
+    color: var(--fav-color);
 }
