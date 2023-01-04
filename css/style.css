@@ -19,6 +19,7 @@
 
 body{
     background-color: var(--body-color);
+    margin: .7rem;
 }
 
 li, a, button {
@@ -34,10 +35,10 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
+    padding: 20px 1.5rem;
     background-color: var(--nav-background);
     border-radius: 10px;
-    margin: .7rem;
+
 }
 
 
@@ -47,29 +48,70 @@ header a:hover{
 }
 
 .nav__links li{
-    display: inline-block;
+    list-style-type: none;
     padding: 0 20px;
 }
 
+.nav__links{
+    padding: 0;
+    margin: 0;
+}
 
 .nav__links li a, .nav__logo{
     transition: all .5s ease 0s;
 }
 
 .nav__logo{
-    margin-right: auto;
     font-weight: 600;
     font-size: large;
 }
 
+.menu__icon{
+    display: none;    
+}
+
+/* for small screens */
+
+@media (max-width: 35rem) {
+    
+.nav__links{
+    position: fixed;
+    margin: 0.7rem;
+    inset: 0% 0 0 35%;
+    backdrop-filter: blur(.8rem);
+    background: hsl(0 0% 20%/ .1);
+    display: table-column;
+    border-radius: 7px;
+    padding: min(30vh, 4rem) 1rem;
+}
+
+.nav__links li{
+    padding: 1rem;
+}
+
+.menu__icon{
+    display: inline;
+    width: 25px;
+    height: auto;
+}
+}
+
+/* for large screens */
+
+@media (min-width: 35rem){
+
+   
+    .nav__links li{
+        display: inline-block;
+    }
+}
 
 
 /* index page */
 #intro{
+    max-height: fit-content;
     display: grid;
-    padding: 10%;
-    margin: .7rem;
-
+    padding: 0 1.5rem;
 }
 
 .intro__text{
@@ -78,10 +120,10 @@ header a:hover{
 
 }
 
-.intro__name a{
+.intro__name{
     color: var(--fav-color);
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .resume{
@@ -94,19 +136,20 @@ header a:hover{
 /* socialmedia links */
 
 .social__links{
-    padding: 3% 10%;
-    margin: .7rem;
-
+    padding-top:10rem ;
 }
 
-.social__links a{
+.social__links img{
+    width: 2.5rem;
+    height: auto;
     transition: all .5s ease 0s;
-    font-size: 15px;
+    font-size: 1.5rem;
     color: var(--font-color-one);
     cursor: pointer;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 
 .social__links a:hover{
     color: var(--fav-color);
 }
+
