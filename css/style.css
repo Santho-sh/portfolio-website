@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root{
-    --body-color: #000;
+    --body-color: rgb(0, 0, 0);
     --nav-background: rgba(255, 255, 255, 0.05);
-    --font-color-one: #fff;
+    --font-color-one: rgb(255, 255, 255);
     --font-color-two: rgb(197, 197, 197);
     --fav-color: rgb(209, 118, 27);
     --font-family: 'Poppins', sans-serif;
@@ -25,44 +25,68 @@ li, a, button {
     font-weight: 500;
     font-size: 16px;
     text-decoration: none;
+    color: var(--font-color-one);
 }
 
 /* navbar */
 
-.navbar{
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 10%;
+    padding: 20px 10%;
     background-color: var(--nav-background);
     border-radius: 10px;
     margin: .7rem;
 }
 
-.nav__list li{
-    display: inline-block;
-    padding: 0pc 20px;
 
+header a:hover{
+    color: var(--fav-color);
+    cursor: pointer;
 }
 
-.nav__list li a, .nav__logo{
+.nav__links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+
+.nav__links li a, .nav__logo{
     transition: all .5s ease 0s;
 }
 
 .nav__logo{
+    margin-right: auto;
     font-weight: 600;
     font-size: large;
 }
 
-.nav__logo:hover{
-    color: var() !important;
+
+
+/* index page */
+#intro{
+    display: grid;
+    padding: 10%;
+    margin: .7rem;
+
 }
 
-.navbar a{
+.intro__text{
     color: var(--font-color-one);
+    font-size: 1.5rem;
+
 }
 
-.navbar a:hover{
+.intro__name a{
     color: var(--fav-color);
-    cursor: pointer;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.resume {
+    margin-top: 1rem;
+    width: 7rem;
+    background-color: var(--nav-background);
+    border-color: var(--fav-color);
 }
