@@ -7,6 +7,9 @@ const navToggle = document.querySelector('.menu__toggle');
 
         if (visibile == 'false') {
           primaryNav.setAttribute('data-visible', true);
-        };
+        }
+        else if (visibile == 'true') {
+          primaryNav.setAttribute('data-visible', false);
+        }
     });
 

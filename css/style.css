@@ -86,7 +86,8 @@ header a:hover{
     padding: min(30vh, 4rem) 1rem;
     z-index: 1000;
 
-    transform: translateX(105%)
+    transform: translateX(105%);
+    transition: transform 300ms ease-in-out;
 }
 
 .nav__links[data-visible='true']{
@@ -118,7 +119,10 @@ header a:hover{
 
 @media (min-width: 35rem){
 
-   
+    .menu__icon{
+        display: hidden;
+    }
+
     .nav__links li{
         display: inline-block;
     }
