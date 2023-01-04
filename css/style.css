@@ -20,6 +20,7 @@
 body{
     background-color: var(--body-color);
     margin: .7rem;
+    overflow: hidden;
 }
 
 li, a, button {
@@ -49,7 +50,7 @@ header a:hover{
 
 .nav__links li{
     list-style-type: none;
-    padding: 0 20px;
+    padding: 0 1.5rem;
 }
 
 .nav__links{
@@ -83,10 +84,17 @@ header a:hover{
     display: table-column;
     border-radius: 7px;
     padding: min(30vh, 4rem) 1rem;
+    z-index: 1000;
+
+    transform: translateX(105%)
+}
+
+.nav__links[data-visible='true']{
+    transform: translateX(0%);
 }
 
 .nav__links li{
-    padding: 1rem;
+    padding: 1rem 10rem 1rem 1rem;
 }
 
 .menu__icon{
@@ -94,8 +102,18 @@ header a:hover{
     width: 25px;
     height: auto;
 }
-}
 
+
+.menu__toggle{
+    background-color: var(--nav-color);
+    font-size: 2rem;
+    border: none;
+    position: absolute;
+    z-index: 9999;
+
+    right: 2rem;
+}
+}
 /* for large screens */
 
 @media (min-width: 35rem){
