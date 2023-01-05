@@ -136,10 +136,11 @@ li, a, button {
 
 }
 
+/* for small screens */
 
+@media (max-width: 60em) {
 
-@media (max-width: 65rem) {
-    .nav-links li a{
+    .nav-link-div{
         display: none;
     }
 
@@ -176,12 +177,10 @@ li, a, button {
 
 }
 
-/* for large screens */
+/* for medium screens */
 
 
-
-
-@media (min-width: 65em) and (max-width: 90em){
+@media (min-width: 60em) and (max-width: 90em){
 
     .nav-menu{
         display: none;
@@ -191,7 +190,7 @@ li, a, button {
         display: none;
     }
     body{
-        max-width: 60em;
+        max-width: 58em;
         margin-left: auto;
         margin-right: auto;
     }
@@ -202,6 +201,8 @@ li, a, button {
         padding-right: 0;
     }
 }
+
+/* for large screens */
 
 @media (min-width: 90em){
 
@@ -230,9 +231,9 @@ li, a, button {
     }
 }
 
+
 /* index page */
 #intro{
-    max-height: fit-content;
     display: grid;
     padding: 0 1.5rem;
 }
