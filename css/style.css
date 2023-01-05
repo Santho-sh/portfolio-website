@@ -3,7 +3,7 @@
 
 :root{
     --body-color: rgb(0, 0, 0);
-    --nav-background: rgba(255, 255, 255, 0.05);
+    --nav-background: rgba(255, 255, 255, 0.08);
     --font-color-one: rgb(255, 255, 255);
     --font-color-two: rgb(197, 197, 197);
     --fav-color: rgb(209, 118, 27);
@@ -42,7 +42,6 @@ header{
 
 }
 
-
 header a:hover{
     color: var(--fav-color);
     cursor: pointer;
@@ -73,8 +72,8 @@ header a:hover{
 
 /* for small screens */
 
-@media (max-width: 35em) {
-    
+@media (max-width: 50em) {
+
 .nav__links{
     position: fixed;
     margin: 0.7rem;
@@ -135,12 +134,18 @@ header a:hover{
     transform: translate(0, -6px) rotate(45deg);
   }
 }
+
 /* for large screens */
 
-@media (min-width: 35em) and (max-width: 50em){
+@media (min-width: 50em) and (max-width: 70em){
 
     .menu__toggle{
         display: none;
+    }
+    body{
+        max-width: 49em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .nav__links li{
@@ -150,12 +155,20 @@ header a:hover{
     }
 }
 
-@media (min-width: 50em){
+@media (min-width: 70em){
+
+    body{
+        max-width: 65em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .menu__toggle{
         display: none;
     }
 
     .nav__links li{
+        padding-right: 0;
         display: inline-block;
     }
 }
@@ -189,15 +202,15 @@ header a:hover{
 /* socialmedia links */
 
 .social__links{
-    padding-top:10rem ;
+    padding-top:10rem;
+    color: var(--font-color-one);
 }
 
-.social__links img{
+.social__links svg{
     width: 2.5rem;
     height: auto;
     transition: all .5s ease 0s;
     font-size: 1.5rem;
-    color: var(--font-color-one);
     cursor: pointer;
     padding-right: 15px;
 }
@@ -205,3 +218,5 @@ header a:hover{
 .social__links a:hover{
     color: var(--fav-color);
 }
+
+
