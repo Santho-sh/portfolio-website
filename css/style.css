@@ -10,6 +10,13 @@
     --font-family: 'Poppins', sans-serif;
 }
 
+.dark-mode {
+    --body-color: rgb(255, 255, 255);
+    --nav-background: rgba(228, 226, 226, 0.08);
+    --font-color-one: rgb(0, 0, 0);
+    --font-color-two: rgb(0, 0, 0);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -32,7 +39,7 @@ li, a, button {
 
 /* navbar */
 
-header{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,71 +49,87 @@ header{
 
 }
 
-header a:hover{
-    color: var(--fav-color);
-    cursor: pointer;
-}
-
-.nav__links li{
-    list-style-type: none;
-    padding: 0 1.5rem;
-}
-
-.nav__links{
+.nav-links, 
+.nav-links-side{
     padding: 0;
     margin: 0;
 }
 
-.nav__links li a, .nav__logo{
-    transition: all .5s ease 0s;
-}
-
-.nav__logo{
+.nav-logo{
     font-weight: 600;
     font-size: large;
 }
 
-.menu__icon{
-    display: none;    
+.nav-logo,
+.navbar a,
+.nav-menu a{
+    transition: all .5s ease 0s;
+}
+.nav-links li{
+    list-style-type: none;
+    padding: 0 1.5rem;
 }
 
-/* for small screens */
-
-@media (max-width: 50em) {
-
-.nav__links{
-    position: fixed;
-    margin: 0.7rem;
-    inset: 0% 0 0 35%;
-    backdrop-filter: blur(.8rem);
-    background: hsl(0 0% 20%/ .1);
-    display: table-column;
-    border-radius: 7px;
-    padding: min(30vh, 4rem) 1rem;
-    z-index: 1000;
-
-    transform: translateX(105%);
-    transition: transform 300ms ease-in-out;
+.navbar a:hover{
+    color: var(--fav-color);
+    cursor: pointer;
 }
 
-.nav__links[data-visible='true']{
-    transform: translateX(0%);
+@media (max-width: 50rem) {
+    .nav-links{
+        display: none;
+    }
+
+    .nav-links-side{
+        list-style: none;
+        cursor: pointer;
+        position: fixed;
+        margin: 0.7rem;
+        margin-top: 6rem;
+        inset: 0 0 0 35%;
+        backdrop-filter: blur(.8rem);
+        background: hsl(0 0% 20%/ .1);
+        border-radius: 7px;
+        padding: min(30vh, 2rem) 1rem;
+        z-index: 1000;
+
+
+        transform: translateX(105%);
+        transition: transform 300ms ease-in-out;
+    }
+
+    .nav-menu-side a:hover{
+        color: var(--fav-color);
+        
+    }
+
+    .nav-links-side[data-visible='true']{
+        transform: translateX(0%);
+    }
+
+
+    .nav-links-side li{
+        padding: 1rem;
+    }
 }
+/* dark-mode */
 
-.nav__links li{
-    padding: 1rem 10rem 1rem 1rem;
-}
-
-
-.menu__toggle{
+.nav-mode {
     background-color: var(--nav-color);
-    font-size: .7rem;
     border: none;
-    position: absolute;
-    z-index: 9999;
-
-    right: 2rem;
+    height: auto;
 }
+
+/* handburger menu */
+
+
+.nav-menu{
+    background-color: var(--nav-color);
+    border: none;
+    z-index: 9999;
+}
+
+/* w3 school code */
 
 .container {
     display: inline-block;
@@ -131,15 +154,24 @@ header a:hover{
   
   /* Rotate last bar */
   .change .bar3 {
-    transform: translate(0, -6px) rotate(45deg);
+    transform: translate(0, -7px) rotate(45deg);
   }
-}
+
+
+
 
 /* for large screens */
 
+
+
+
 @media (min-width: 50em) and (max-width: 70em){
 
-    .menu__toggle{
+    .nav-menu{
+        display: none;
+    }
+
+    .nav-menu-side{
         display: none;
     }
     body{
@@ -148,7 +180,7 @@ header a:hover{
         margin-right: auto;
     }
 
-    .nav__links li{
+    .nav-links li{
         display: inline-block;
         padding-left: 2rem;
         padding-right: 0;
@@ -156,6 +188,13 @@ header a:hover{
 }
 
 @media (min-width: 70em){
+    .nav-menu{
+        display: none;
+    }
+
+    .nav-menu-side{
+        display: none;
+    }
 
     body{
         max-width: 65em;
@@ -163,11 +202,11 @@ header a:hover{
         margin-right: auto;
     }
 
-    .menu__toggle{
+    .menu-toggle{
         display: none;
     }
 
-    .nav__links li{
+    .nav-links li{
         padding-right: 0;
         display: inline-block;
     }
@@ -180,13 +219,13 @@ header a:hover{
     padding: 0 1.5rem;
 }
 
-.intro__text{
+.intro-text{
     color: var(--font-color-one);
     font-size: 1.5rem;
 
 }
 
-.intro__name{
+.intro-name{
     color: var(--fav-color);
     font-weight: 600;
     font-size: 2.5rem;
@@ -201,12 +240,12 @@ header a:hover{
 
 /* socialmedia links */
 
-.social__links{
+.social-links{
     padding-top:10rem;
     color: var(--font-color-one);
 }
 
-.social__links svg{
+.social-links svg, svg{
     width: 2.5rem;
     height: auto;
     transition: all .5s ease 0s;
@@ -215,8 +254,7 @@ header a:hover{
     padding-right: 15px;
 }
 
-.social__links a:hover{
+.social-links a:hover{
     color: var(--fav-color);
 }
-
 

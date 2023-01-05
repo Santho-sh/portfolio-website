@@ -1,5 +1,5 @@
-const primaryNav = document.querySelector('.nav__links');
-const navToggle = document.querySelector('.menu__toggle');
+const primaryNav = document.querySelector('.nav-links-side');
+const navToggle = document.querySelector('.nav-menu');
 
 
 navToggle.addEventListener("click", () => {
@@ -15,4 +15,10 @@ navToggle.addEventListener("click", () => {
 
 function myFunction(x) {
   x.classList.toggle("change");
+}
+
+
+function modeSwitch() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
 }
