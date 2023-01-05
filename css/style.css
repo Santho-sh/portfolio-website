@@ -73,7 +73,7 @@ header a:hover{
 
 /* for small screens */
 
-@media (max-width: 35rem) {
+@media (max-width: 35em) {
     
 .nav__links{
     position: fixed;
@@ -98,36 +98,67 @@ header a:hover{
     padding: 1rem 10rem 1rem 1rem;
 }
 
-.menu__icon{
-    display: inline;
-    width: 25px;
-    height: auto;
-}
-
 
 .menu__toggle{
     background-color: var(--nav-color);
-    font-size: 2rem;
+    font-size: .7rem;
     border: none;
     position: absolute;
     z-index: 9999;
 
     right: 2rem;
 }
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 3px;
+    background-color: var(--font-color-one);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  /* Rotate first bar */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  /* Fade out the second bar */
+  .change .bar2 {opacity: 0;}
+  
+  /* Rotate last bar */
+  .change .bar3 {
+    transform: translate(0, -6px) rotate(45deg);
+  }
 }
 /* for large screens */
 
-@media (min-width: 35rem){
+@media (min-width: 35em) and (max-width: 50em){
 
-    .menu__icon{
-        display: hidden;
+    .menu__toggle{
+        display: none;
+    }
+
+    .nav__links li{
+        display: inline-block;
+        padding-left: 2rem;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 50em){
+    .menu__toggle{
+        display: none;
     }
 
     .nav__links li{
         display: inline-block;
     }
 }
-
 
 /* index page */
 #intro{
@@ -174,4 +205,3 @@ header a:hover{
 .social__links a:hover{
     color: var(--fav-color);
 }
-
