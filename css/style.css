@@ -8,8 +8,11 @@
     --font-color-two: rgb(197, 197, 197);
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
-    --intro-font: 2rem;
-    --nav-font: 1.3rem;
+
+    --intro-font-small: 2.5rem;
+    --nav-font-samll: 1.1rem;
+    --intro-font-big: 3.3rem;
+    --nav-font-big: 1.3rem;
 }
 
 .dark-mode {
@@ -42,7 +45,7 @@ li, a, button {
 /* navbar */
 
 .navbar{
-    font-size: var(--nav-font);
+    font-size: var(--nav-font-big);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -145,30 +148,34 @@ li, a, button {
 
 
 .intro-text{
-    font-size: var(--intro-font);
+    font-size: var(--intro-font-big);
     height: 79vh;
     display: flex;
     padding: 0 1.5rem;
     justify-content: flex-start;
     align-items: center;
     color: var(--font-color-one);
-    text-shadow: 2px 2.5px 2px var(--fav-color);
+    text-shadow: 2px 2.5px 2px rgba(177, 173, 173, 0.784); 
 }
 
 .intro-name{
-    font-size: var(--intro-font);
+    font-size: var(--intro-font-big);
     color: var(--fav-color);
     font-weight: 600;
-    text-shadow: 2px 2.5px 2px var(--font-color-one);
     
+    text-shadow: 1px 1px 2px red, 0 0 1em var(--fav-color), 0 0 0.2em var(--fav-color);  
 }
 
 .resume{
     margin-top: 1rem;
-    width: 7rem;
+    width: 9rem;
     color: var(--font-color-one);
     background-color: var(--nav-background);
+    border-width: 1.8px;
     border-color: var(--fav-color);
+    font-size: 1.4rem;
+
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 /* socialmedia links */
@@ -239,6 +246,19 @@ li, a, button {
     .social-links svg{
         margin-right: 1.25rem;
         width: 1.5rem;
+    }
+
+    .intro-name,
+    .intro-text{
+        font-size: var(--intro-font-small);
+    }
+    .resume{
+        font-size: 1rem;
+        width: 7rem;
+    }
+
+    .navbar{
+        font-size: var(--nav-font-samll);
     }
 
 }
