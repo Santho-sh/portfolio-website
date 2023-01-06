@@ -22,3 +22,14 @@ function modeSwitch() {
   var element = document.body;
   element.classList.toggle("dark-mode");
 }
+
+// to change icon
+
+const mode = document.querySelector('.nav-mode')
+
+mode.addEventListener('click', (e) => {
+  let current_mode = e.currentTarget.children[0].children[0];
+  current_mode.getAttribute('href') === '#to-light'
+  ? current_mode.setAttribute('href', '#to-dark')
+  : current_mode.setAttribute('href', '#to-light')
+})
