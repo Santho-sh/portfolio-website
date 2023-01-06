@@ -8,9 +8,8 @@
     --font-color-two: rgb(197, 197, 197);
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
-    --intro-font: 4vh;
-    --intro-font-name: 4vh;
-    --nav-font: 2.3vh;
+    --intro-font: 2rem;
+    --nav-font: 1.3rem;
 }
 
 .dark-mode {
@@ -157,7 +156,7 @@ li, a, button {
 }
 
 .intro-name{
-    font-size: var(--intro-font-name);
+    font-size: var(--intro-font);
     color: var(--fav-color);
     font-weight: 600;
     text-shadow: 2px 2.5px 2px var(--font-color-one);
@@ -247,15 +246,13 @@ li, a, button {
 /* for medium screens */
 
 
-@media (min-width: 50em) and (max-width: 90em){
+@media (min-width: 50em) and (max-width: 100em){
 
-    .nav-menu{
-        display: none;
-    }
-
+    .nav-menu,
     .nav-menu-side{
         display: none;
     }
+
     body{
         max-width: 90vw;
         margin-left: auto;
@@ -271,19 +268,15 @@ li, a, button {
 
 /* for large screens */
 
-@media (min-width: 90em){
+@media (min-width: 100em){
 
-    .nav-menu{
-        display: none;
-    }
-
-
+    .nav-menu,
     .nav-menu-side{
         display: none;
     }
 
+
     body{
-        font-size: large;
         max-width: 90em;
         margin-left: auto;
         margin-right: auto;
