@@ -9,7 +9,7 @@
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
     --intro-font: 4vh;
-    --intro-font-name: 7vh;
+    --intro-font-name: 4vh;
     --nav-font: 2.3vh;
 }
 
@@ -51,7 +51,7 @@ li, a, button {
     background-color: var(--nav-background);
     border-radius: 10px;
     
-    box-shadow: 0 0 12px 0 rgb(0 0 0 / 13%);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
 }
 
@@ -66,6 +66,10 @@ li, a, button {
 .nav-logo{
     margin-right: auto;
     font-weight: 600;
+}
+
+.nav-logo span{
+    color: var(--fav-color);
 }
 
 .nav-logo,
@@ -149,12 +153,15 @@ li, a, button {
     justify-content: flex-start;
     align-items: center;
     color: var(--font-color-one);
+    text-shadow: 2px 2.5px 2px var(--fav-color);
 }
 
 .intro-name{
     font-size: var(--intro-font-name);
     color: var(--fav-color);
     font-weight: 600;
+    text-shadow: 2px 2.5px 2px var(--font-color-one);
+    
 }
 
 .resume{
