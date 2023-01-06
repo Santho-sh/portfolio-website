@@ -8,6 +8,9 @@
     --font-color-two: rgb(197, 197, 197);
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
+    --intro-font: 4vh;
+    --intro-font-name: 7vh;
+    --nav-font: 2.3vh;
 }
 
 .dark-mode {
@@ -33,7 +36,6 @@ body{
 li, a, button {
     padding: 0;
     font-weight: 500;
-    font-size: 16px;
     text-decoration: none;
     color: var(--font-color-one);
 }
@@ -41,7 +43,7 @@ li, a, button {
 /* navbar */
 
 .navbar{
-    
+    font-size: var(--nav-font);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -56,6 +58,7 @@ li, a, button {
 .nav-links{
     padding: 0;
     margin: 0;
+    font-weight: 500;
     margin-right: 3rem;
 }
 
@@ -63,7 +66,6 @@ li, a, button {
 .nav-logo{
     margin-right: auto;
     font-weight: 600;
-    font-size: large;
 }
 
 .nav-logo,
@@ -133,12 +135,65 @@ li, a, button {
     background-color: var(--nav-color);
     border: none;
     height: auto;
-
 }
+
+
+/* index page */
+
+
+.intro-text{
+    font-size: var(--intro-font);
+    height: 79vh;
+    display: flex;
+    padding: 0 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--font-color-one);
+}
+
+.intro-name{
+    font-size: var(--intro-font-name);
+    color: var(--fav-color);
+    font-weight: 600;
+}
+
+.resume{
+    margin-top: 1rem;
+    width: 7rem;
+    color: var(--font-color-one);
+    background-color: var(--nav-background);
+    border-color: var(--fav-color);
+}
+
+/* socialmedia links */
+
+.social-links{
+    padding-left: 1.5rem;
+    color: var(--font-color-one);
+}
+
+.social-links svg{
+    margin-right: 1.2rem;
+    width: 2rem;
+    height: auto;
+    transition: all .5s ease 0s;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.social-links a:hover{
+    color: var(--fav-color);
+}
+
 
 /* for small screens */
 
-@media (max-width: 60em) {
+@media (max-width: 50em) {
+
+    .navbar{
+        /* menu icon has .5rem padding :1.5rem - 0.5rem*/
+        padding-right: 1rem;
+    }
 
     .nav-link-div{
         display: none;
@@ -175,12 +230,17 @@ li, a, button {
         padding: 1rem;
     }
 
+    .social-links svg{
+        margin-right: 1.25rem;
+        width: 1.5rem;
+    }
+
 }
 
 /* for medium screens */
 
 
-@media (min-width: 60em) and (max-width: 90em){
+@media (min-width: 50em) and (max-width: 90em){
 
     .nav-menu{
         display: none;
@@ -190,7 +250,7 @@ li, a, button {
         display: none;
     }
     body{
-        max-width: 58em;
+        max-width: 90vw;
         margin-left: auto;
         margin-right: auto;
     }
@@ -216,7 +276,8 @@ li, a, button {
     }
 
     body{
-        max-width: 87em;
+        font-size: large;
+        max-width: 90em;
         margin-left: auto;
         margin-right: auto;
     }
@@ -230,52 +291,3 @@ li, a, button {
         display: inline-block;
     }
 }
-
-
-/* index page */
-#intro{
-    display: grid;
-    padding: 0 1.5rem;
-}
-
-.intro-text{
-    margin-top: 10rem;
-    color: var(--font-color-one);
-    font-size: 1.5rem;
-
-}
-
-.intro-name{
-    color: var(--fav-color);
-    font-weight: 600;
-    font-size: 2.5rem;
-}
-
-.resume{
-    margin-top: 1rem;
-    width: 7rem;
-    color: var(--font-color-one);
-    background-color: var(--nav-background);
-    border-color: var(--fav-color);
-}
-
-/* socialmedia links */
-
-.social-links{
-    padding-top:10rem;
-    color: var(--font-color-one);
-}
-
-.social-links svg, svg{
-    width: 2.5rem;
-    height: auto;
-    transition: all .5s ease 0s;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding-right: 15px;
-}
-
-.social-links a:hover{
-    color: var(--fav-color);
-}
-
