@@ -5,7 +5,7 @@
     --body-color: rgb(0, 0, 0);
     --nav-background: rgba(50, 50, 50, 0.445);
     --font-color-one: rgb(255, 255, 255);
-    --font-color-two: rgb(197, 197, 197);
+    --font-color-two: rgb(107, 99, 99);
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
 
@@ -19,7 +19,6 @@
     --body-color: rgb(255, 255, 255);
     --nav-background: rgb(255, 255, 255);
     --font-color-one: rgb(0, 0, 0);
-    --font-color-two: rgb(0, 0, 0);
 }
 
 *{
@@ -32,7 +31,7 @@
 body{
     background-color: var(--body-color);
     margin: .5rem;
-    overflow: hidden;
+    
 }
 
 li, a, button {
@@ -190,6 +189,9 @@ li, a, button {
 /* socialmedia links */
 
 .social-links{
+
+    padding-bottom: 2rem;
+
     padding-left: 1.5rem;
     color: var(--font-color-one);
 }
@@ -205,6 +207,37 @@ li, a, button {
 
 .social-links a:hover{
     color: var(--fav-color);
+}
+
+
+/* footer */
+
+.footer {
+    color: var(--font-color-two);
+    background-color: var(--nav-background);
+    border-radius: 10px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.social-links-footer svg{
+    color: var(--font-color-two);
+    margin-right: .7rem;
+    width: 1.1rem;
+    height: auto;
+    transition: all .5s ease 0s;
+    cursor: pointer;
+}
+
+.social-links-footer svg:hover{
+    color: var(--fav-color);
+}
+
+.copyright-text{
+    font-size: .9rem;
 }
 
 
@@ -230,7 +263,7 @@ li, a, button {
         inset: 0 0 0 35%;
         backdrop-filter: blur(.8rem);
         background: hsl(0 0% 20%/ .1);
-        border-radius: 7px;
+        border-radius: 10px;
         padding: min(30vh, 2rem) 1rem;
         z-index: 1000;
         
