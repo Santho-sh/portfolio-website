@@ -5,7 +5,7 @@
     --body-color: rgb(0, 0, 0);
     --nav-background: rgba(50, 50, 50, 0.445);
     --font-color-one: rgb(255, 255, 255);
-    --font-color-two: rgb(107, 99, 99);
+    --font-color-two: rgb(128, 115, 115);
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
 
@@ -217,7 +217,7 @@ li, a, button {
     color: var(--font-color-two);
     background-color: var(--nav-background);
     border-radius: 10px;
-    padding: 2rem var(--side-padding);
+    padding: 1.5rem var(--side-padding);
     display: flex;
     justify-content: space-between;
 
@@ -330,11 +330,16 @@ li, a, button {
         padding-left: 2rem;
         padding-right: 0;
     }
+
+    .about-text{
+        font-size: 2rem;
+    }
 }
 
 /* for large screens */
 
 @media (min-width: 70rem){
+
 
     .nav-menu,
     .nav-menu-side{
@@ -356,4 +361,123 @@ li, a, button {
         padding-right: 0;
         display: inline-block;
     }
+
+    .about-page{
+        display: flex;
+        flex-direction: row;
+    }
+
 }
+
+
+
+/* about */
+
+.about {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    color: var(--font-color-one);
+    padding-top: 2rem;
+
+}
+
+.about span{
+    color: var(--fav-color);
+}
+
+
+.about-page{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.person-plus-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.person-name{
+    width: 12rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    color: var(--font-color-one);
+
+    border-top: 2px solid var(--fav-color);
+}
+
+/* text below name - developer  */
+
+.person-text{
+    font-size: 1rem;
+    color: var(--font-color-two);
+}
+
+
+.about-text{
+    margin-top: 2rem;
+    color: var(--font-color-one);
+    padding: var(--side-padding);
+}
+
+/* image effect*/
+
+  img{
+    max-width: 100%;
+    display: block;
+  }
+
+  .person{
+    position: relative;
+    max-width: 15rem;
+    margin-inline: auto;
+  }
+
+  .person-container{
+    aspect-ratio: 1 / 1.2;
+    display: grid;
+    align-items: end;
+    border-radius: 0 0 100vw 100vw;
+    overflow: hidden;
+    
+    transition: transform 250ms ease-in-out;
+  }
+  
+  
+  .person-circle{
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50%;
+    margin-inline: auto;
+  }
+  
+  .person-img{
+    position: relative;
+    padding-left: .7rem;
+    bottom: 2.2rem;
+    z-index: 2;
+    transform: scale(2);
+  
+    transition: transform 250ms ease-in-out;
+  }
+  
+  .person-container:hover {
+    transform: scale(1.05);
+  }
+  
+  .person-container:hover .person-img{
+      transform: 
+        scale(2.05)
+        translateY(-1rem);
+  }
+
+ 
