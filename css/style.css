@@ -13,6 +13,8 @@
     --nav-font-samll: 1rem;
     --intro-font-big: 3rem;
     --nav-font-big: 1rem;
+
+    --side-padding: 1.5rem;
 }
 
 .dark-mode {
@@ -48,7 +50,7 @@ li, a, button {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 1.3rem 1.5rem;
+    padding: 1.3rem var(--side-padding);
     background-color: var(--nav-background);
     border-radius: 10px;
     
@@ -79,7 +81,7 @@ li, a, button {
     transition: all .5s ease 0s;
 }
 .nav-links li{
-    list-style-type: none;
+    list-style: none;
     padding: 0 1.5rem;
 }
 
@@ -154,7 +156,7 @@ li, a, button {
     font-size: var(--intro-font-big);
     height: 79vh;
     display: flex;
-    padding: 0 1.5rem;
+    padding: 0 var(--side-padding);
     justify-content: flex-start;
     align-items: center;
     color: var(--font-color-one);
@@ -189,10 +191,9 @@ li, a, button {
 /* socialmedia links */
 
 .social-links{
+    padding-bottom: 7vh;
 
-    padding-bottom: 2rem;
-
-    padding-left: 1.5rem;
+    padding-left: var(--side-padding);
     color: var(--font-color-one);
 }
 
@@ -216,7 +217,7 @@ li, a, button {
     color: var(--font-color-two);
     background-color: var(--nav-background);
     border-radius: 10px;
-    padding: 2rem 1.5rem;
+    padding: 2rem var(--side-padding);
     display: flex;
     justify-content: space-between;
 
