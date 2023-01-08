@@ -9,6 +9,8 @@
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
 
+    --button-hover: rgba(238, 176, 100, 0.545);
+
     --intro-font-small: 2.5rem;
     --nav-font-samll: 1rem;
     --intro-font-big: 3rem;
@@ -172,37 +174,31 @@ li, a, button {
 }
 
 .resume{
-    margin-top: 1rem;
-    width: 7rem;
+    font-size: 1.1rem;
     color: var(--font-color-one);
-    background-color: var(--nav-background);
-    border-width: 1.8px;
-    border-color: var(--fav-color);
-    font-size: 1rem;
+    border: var(--fav-color) 0.125em solid;
+    padding: 0.3em 1em;
+    border-radius: 0.4em;
     transition: all .5s ease 0s;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
+  }
 
-.resume:hover {
-    border-color: var(--fav-color);
-    background-color: rgba(238, 176, 100, 0.545);
-}
+.resume:hover{
+    background-color: var(--button-hover);
+  }
 
 /* socialmedia links */
 
 .social-links{
     padding-bottom: 7vh;
-
     padding-left: var(--side-padding);
     color: var(--font-color-one);
 }
 
 .social-links svg{
     margin-right: 1.2rem;
-    width: 2rem;
+    width: 1.6rem;
     height: auto;
     transition: all .5s ease 0s;
-    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -331,21 +327,20 @@ li, a, button {
         padding-right: 0;
     }
 
-    .about-text{
-        font-size: 2rem;
+    .about-page{
+        font-size: 1.2rem;
     }
+
 }
 
 /* for large screens */
 
 @media (min-width: 70rem){
 
-
     .nav-menu,
     .nav-menu-side{
         display: none;
     }
-
 
     body{
         max-width: 68rem;
@@ -361,10 +356,9 @@ li, a, button {
         padding-right: 0;
         display: inline-block;
     }
-
+     
     .about-page{
-        display: flex;
-        flex-direction: row;
+        font-size: 1.2rem;
     }
 
 }
@@ -480,4 +474,46 @@ li, a, button {
         translateY(-1rem);
   }
 
+  /* social media links on about .about-page */
+
+  .social-links-about{
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    color: var(--font-color-one);
+}
+
+.social-links-about svg{
+    margin: .5rem;
+    width: 1.5rem;
+    height: auto;
+    transition: all .5s ease 0s;
+    cursor: pointer;
+    
+}
+
+.social-links-about a:hover{
+    color: var(--fav-color);
+}
+
+.contact-button{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.contact-button a{
+    color: var(--font-color-one);
+    font-size: 1.1rem;;
+    border: 0.125em solid var(--fav-color);
+    border-radius: 0.4em ;
+    transition: all .5s ease 0s;
+    padding: 0.3em 1em;
+
+}
+
+.contact-button a:hover{
+    background-color: var(--button-hover);
+  }
  
