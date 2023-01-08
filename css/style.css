@@ -17,6 +17,7 @@
     --nav-font-big: 1rem;
 
     --box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    --text-shadow: 2px 2.5px 4px rgba(183, 183, 183, 0.784);
 
     --side-padding: 1.5rem;
     --radius: 10px;
@@ -165,7 +166,7 @@ li, a, button {
     justify-content: flex-start;
     align-items: center;
     color: var(--font-color-one);
-    text-shadow: 2px 2.5px 4px rgba(183, 183, 183, 0.784); 
+    text-shadow: var(--text-shadow); 
 }
 
 .intro-name{
@@ -219,6 +220,7 @@ li, a, button {
     padding: 1.5rem var(--side-padding);
     display: flex;
     justify-content: space-between;
+    margin-top: 2rem;
 
     box-shadow: var(--box-shadow);
 }
@@ -249,6 +251,7 @@ li, a, button {
     justify-content: center;
     color: var(--font-color-one);
     padding-top: 2rem;
+    text-shadow: var(--text-shadow);
 
 }
 
@@ -280,6 +283,7 @@ li, a, button {
     color: var(--font-color-one);
 
     border-top: 2px solid var(--fav-color);
+    text-shadow: var(--text-shadow);
 }
 
 /* text below name - developer  */
@@ -373,11 +377,16 @@ li, a, button {
     color: var(--fav-color);
 }
 
+button{
+    background-color: var(--body-color);
+    border: none;
+}
+
 .contact-button,
 .send-button{
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    text-shadow: var(--text-shadow);
 }
 
 .contact-button a,
@@ -406,6 +415,8 @@ li, a, button {
     justify-content: center;
     padding: 2rem 0;
     border-bottom: 2px var(--fav-color) solid;
+
+    text-shadow: var(--text-shadow);
 }
 
 
@@ -424,8 +435,9 @@ li, a, button {
 
 .contact-form input, textarea{
     padding: 1rem;
-    margin: 1rem;
-    width: 50vw;
+    margin: .5rem;
+    width: 100%;
+    max-width: 30rem;
     border: none;
     background-color: var(--nav-background);
     border-radius: var(--radius);
@@ -433,7 +445,9 @@ li, a, button {
     box-shadow: var(--box-shadow);
 }
 
-
+.contact-form textarea{
+    margin-bottom: 2rem;
+}
 
 
 /* for small screens */
@@ -499,10 +513,6 @@ li, a, button {
 
     .navbar{
         font-size: var(--nav-font-samll);
-    }
-
-    .contact-form input, textarea{
-        width: 100%;
     }
 
 }
