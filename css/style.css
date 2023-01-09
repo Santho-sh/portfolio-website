@@ -56,6 +56,13 @@ li, a, button {
     color: var(--font-color-one);
 }
 
+/* to remove bleck border whem filling form */
+
+*,*:focus,*:hover{
+    outline:none;
+}
+
+
 /* navbar */
 
 .navbar{
@@ -527,9 +534,6 @@ button{
 .skills div:hover{
     scale: 1.05;
 }
-
-
-
 
 
 /* for small screens */
