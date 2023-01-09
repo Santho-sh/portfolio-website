@@ -3,7 +3,7 @@
 
 :root{
 
-    --body-color: rgb(0, 0, 0);
+    --body-color: #121212;
     --nav-background: rgba(50, 50, 50, 0.445);
     --font-color-one: rgb(255, 255, 255);
     --font-color-two: rgb(128, 115, 115);
@@ -16,9 +16,9 @@
     --nav-font-samll: 1rem;
     --intro-font-big: 3rem;
     --nav-font-big: 1rem;
-
-    --box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-    --text-shadow: 2px 2.5px 4px rgba(183, 183, 183, 0.784);
+    
+    --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.297);
+    --text-shadow: 2px 2.5px 4px rgb(0, 0, 0);
 
     --side-padding: 1.5rem;
     --radius: 10px;
@@ -27,7 +27,10 @@
 .dark-mode {
     --body-color: rgb(255, 255, 255);
     --nav-background: rgb(255, 255, 255);
-    --font-color-one: rgb(0, 0, 0);
+    --font-color-one: #2a2a2a;
+
+    --box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    --text-shadow: 2px 2.5px 4px rgba(183, 183, 183, 0.784);
 }
 
 *{
@@ -40,7 +43,10 @@
 body{
     background-color: var(--body-color);
     margin: .5rem;
-    
+    min-height: calc(100vh - 1rem);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 li, a, button {
@@ -408,12 +414,18 @@ button{
   }
 
   /* cotact page */
-
 .contact-title{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-title div{
     color: var(--font-color-one);
     font-size: 2rem;
     display: flex;
     justify-content: center;
+    width: 20em;
+    max-width: 85vw;
     padding: 2rem 0;
     border-bottom: 2px var(--fav-color) solid;
 
@@ -449,6 +461,75 @@ button{
 .contact-form textarea{
     margin-bottom: 2rem;
 }
+
+
+/* skills page */
+
+.skills-title{
+    display: flex;
+    justify-content: center;
+} 
+
+.skills-title div{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 2rem 0;
+    width: 20em;
+    max-width: 85vw;
+
+    color: var(--font-color-one);
+
+    border-bottom: 2px var(--fav-color) solid;
+    text-shadow: var(--text-shadow);
+}
+
+
+.skills-title span{
+    color: var(--fav-color);
+}
+
+.skills img {
+    width: 80px;
+    height: auto;
+}
+
+.skills{
+    color: var(--font-color-one);
+
+    display: flex;
+    padding-top: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills div{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 150px;
+    height: 150px;
+    font-size: 1rem;
+    border-radius: var(--radius);
+
+    margin: .65rem;
+    box-shadow: var(--box-shadow);
+    transition: scale 150ms ease-in-out;
+}
+
+.skills div span{
+    padding: .5rem 0;
+}
+
+.skills div:hover{
+    scale: 1.05;
+}
+
+
+
 
 
 /* for small screens */
@@ -544,6 +625,10 @@ button{
         font-size: 1.2rem;
     }
 
+    .skills div{
+        margin: .7rem;
+    }
+
 }
 
 /* for large screens */
@@ -572,6 +657,10 @@ button{
      
     .about-page{
         font-size: 1.2rem;
+    }
+
+    .skills div{
+        margin: .7rem;
     }
 
 }
