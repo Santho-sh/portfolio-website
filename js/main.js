@@ -13,23 +13,61 @@ navToggle.addEventListener("click", () => {
   }
 });
 
+// handburger menu
+
 function myFunction(x) {
   x.classList.toggle("change");
 }
 
 
-function modeSwitch() {
-  var element = document.body;
-  element.classList.toggle("dark-mode");
-}
+// dark mode / light mode
 
-// to change icon
-
+let darkMode = localStorage.getItem("darkMode")
 const mode = document.querySelector('.nav-mode')
 
-mode.addEventListener('click', (e) => {
-  let current_mode = e.currentTarget.children[0].children[0];
+
+const enableDarkMode = () => {
+  document.body.classList.add('dark-mode');
+  localStorage.setItem('darkMode', 'enabled');
+};
+
+const disableDarkMode = () => {
+  document.body.classList.remove('dark-mode');
+  localStorage.setItem('darkMode', null);
+};
+
+
+//check for previously used mode and apply that
+
+//icon
+let currentMode = mode.children[0].children[0];
+
+if (darkMode === 'enabled') {
+  enableDarkMode();
+  currentMode.setAttribute('href', '#to-dark')
+}
+else{
+  disableDarkMode();
+  currentMode.setAttribute('href', '#to-light')
+};
+
+
+
+mode.addEventListener('click', () => {
+
+  darkMode = localStorage.getItem('darkMode')
+
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  }
+  else{
+    disableDarkMode();
+  };
+
+  //change icon
+
+  let current_mode = mode.children[0].children[0];
   current_mode.getAttribute('href') === '#to-light'
   ? current_mode.setAttribute('href', '#to-dark')
   : current_mode.setAttribute('href', '#to-light')
-})
+});
