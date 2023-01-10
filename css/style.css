@@ -26,9 +26,10 @@
 
     --side-padding: 1.5rem;
     --radius: 10px;
+
 }
 
-.dark-mode {
+.dark-mode{
     --body-color: rgb(255, 255, 255);
     --nav-background: rgb(255, 255, 255);
     --font-color-one: #2a2a2a;
@@ -229,6 +230,46 @@ li, a, button {
     color: var(--fav-color);
 }
 
+/* projects section */
+
+.project-title{
+    font-size: 2rem;
+    display: flex;
+    width: 10em;
+    max-width: 85vw;
+    justify-content: start;
+    margin: var(--side-padding);
+    padding:.5rem 0; 
+    padding-top: 0;
+    color: var(--font-color-one);
+    text-shadow: var(--text-shadow);
+    border-bottom: 2px var(--fav-color) solid;
+
+}
+
+.projects{
+    color: var(--font-color-one);
+    padding: var(--side-padding);
+}
+.projects div{
+    margin-bottom: .5rem;
+}
+
+.name{
+    font-size: 1.5rem;
+}
+
+.name span,
+.time{
+    font-size: .8rem;
+    color: var(--font-color-two);
+}
+
+.link a{
+    color: var(--fav-color);
+}
+
+
 
 /* footer */
 
@@ -239,7 +280,7 @@ li, a, button {
     padding: 1.5rem var(--side-padding);
     display: flex;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     box-shadow: var(--box-shadow);
 }
@@ -406,6 +447,10 @@ button{
     display: flex;
     justify-content: center;
     text-shadow: var(--text-shadow);
+}
+
+.contact-button{
+    margin-bottom: 1.5rem;
 }
 
 .contact-button a,
@@ -631,11 +676,16 @@ button{
     }
 
     .about-page{
-        font-size: 1.2rem;
+        font-size: 1.05rem;
     }
 
     .skills div{
         margin: .7rem;
+    }
+
+
+    .projects .body{
+        font-size: 1.05rem;
     }
 
 }
@@ -665,11 +715,15 @@ button{
     }
      
     .about-page{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .skills div{
         margin: .7rem;
+    }
+
+    .projects .body{
+        font-size: 1.1rem;
     }
 
 }
