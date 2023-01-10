@@ -7,6 +7,7 @@
     --nav-background: rgba(50, 50, 50, 0.445);
     --font-color-one: rgb(255, 255, 255);
     --font-color-two: rgb(128, 115, 115);
+    /* other fav color; #0DCEDA */
     --fav-color: rgb(255, 153, 52);
     --font-family: 'Poppins', sans-serif;
 
@@ -16,7 +17,10 @@
     --nav-font-samll: 1rem;
     --intro-font-big: 3rem;
     --nav-font-big: 1rem;
+
+    --hover-transition: all .3s ease-in-out;
     
+    --name-text-shadow:1px 1px 2px rgb(255, 38, 0), 0 0 .25em var(--fav-color);
     --box-shadow: 0 3px 10px rgba(0, 0, 0, 0.297);
     --text-shadow: 2px 2.5px 4px rgb(0, 0, 0);
 
@@ -45,6 +49,7 @@ body{
     margin: .5rem;
     min-height: calc(100vh - 1rem);
 
+    /* To lock footer on bottom */
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -56,7 +61,7 @@ li, a, button {
     color: var(--font-color-one);
 }
 
-/* to remove bleck border whem filling form */
+/* to remove bleck border when filling form */
 
 *,*:focus,*:hover{
     outline:none;
@@ -98,14 +103,14 @@ li, a, button {
 .nav-logo,
 .navbar a,
 .nav-menu a{
-    transition: all .5s ease 0s;
+    transition: var(--hover-transition);
 }
 .nav-links li{
     list-style: none;
     padding: 0 1.5rem;
 }
 
-.navbar a:hover{
+.navbar a:not(.nav-logo):hover {
     color: var(--fav-color);
     cursor: pointer;
 }
@@ -188,7 +193,7 @@ li, a, button {
     color: var(--fav-color);
     font-weight: 600;
     
-    text-shadow: 1px 1px 2px red, 0 0 .5em var(--fav-color)
+    text-shadow: var(--name-text-shadow);
 }
 
 .resume{
@@ -197,7 +202,7 @@ li, a, button {
     border: var(--fav-color) 0.125em solid;
     padding: 0.3em 1em;
     border-radius: 0.4em;
-    transition: all .5s ease 0s;
+    transition: var(--hover-transition);
   }
 
 .resume:hover{
@@ -216,7 +221,7 @@ li, a, button {
     margin-right: 1.2rem;
     width: 1.6rem;
     height: auto;
-    transition: all .5s ease 0s;
+    transition: var(--hover-transition);
     cursor: pointer;
 }
 
@@ -244,7 +249,7 @@ li, a, button {
     margin-right: .7rem;
     width: 1.1rem;
     height: auto;
-    transition: all .5s ease 0s;
+    transition: var(--hover-transition);
     cursor: pointer;
 }
 
@@ -382,7 +387,7 @@ li, a, button {
     margin: .5rem;
     width: 1.5rem;
     height: auto;
-    transition: all .5s ease 0s;
+    transition: var(--hover-transition);
     cursor: pointer;
     
 }
@@ -409,7 +414,7 @@ button{
     font-size: 1.1rem;;
     border: 0.125em solid var(--fav-color);
     border-radius: 0.4em ;
-    transition: all .5s ease 0s;
+    transition: var(--hover-transition);
     padding: 0.3em 1em;
 
 }
@@ -568,7 +573,7 @@ button{
     }
 
     .nav-menu-side a{
-        transition: all .5s ease 0s;
+        transition: var(--hover-transition);
     }
 
     .nav-menu-side a:hover{
