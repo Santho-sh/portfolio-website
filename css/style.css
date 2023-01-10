@@ -54,6 +54,9 @@ body{
     /* To lock footer on bottom */
     display: grid;
     grid-template-rows: auto 1fr auto;
+
+    /* to remove highlight blue color when clicked on mobiles (side nav bar) */
+    -webkit-tap-highlight-color: transparent;
 }
 
 li, a, button {
