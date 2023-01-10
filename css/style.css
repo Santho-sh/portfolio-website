@@ -180,7 +180,7 @@ li, a, button {
 
 .intro-text{
     font-size: var(--intro-font-big);
-    height: 79vh;
+    height: 77vh;
     display: flex;
     padding: 0 var(--side-padding);
     justify-content: flex-start;
@@ -213,7 +213,7 @@ li, a, button {
 /* socialmedia links */
 
 .social-links{
-    padding-bottom: 7vh;
+    padding-bottom: 7vw;
     padding-left: var(--side-padding);
     color: var(--font-color-one);
 }
