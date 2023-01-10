@@ -230,10 +230,11 @@ li, a, button {
     color: var(--fav-color);
 }
 
-/* projects section */
+/* projects section and certificate section */
 
+.certificate-title,
 .project-title{
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: flex;
     width: 10em;
     max-width: 85vw;
@@ -256,7 +257,7 @@ li, a, button {
 }
 
 .name{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .name span,
@@ -265,7 +266,7 @@ li, a, button {
     color: var(--font-color-two);
 }
 
-.link a{
+.link{
     color: var(--fav-color);
 }
 
@@ -583,6 +584,14 @@ button{
 
 .skills div:hover{
     scale: 1.05;
+}
+
+.certificates{
+    color: var(--font-color-one);
+    padding: var(--side-padding);
+}
+.certificates div{
+    margin-bottom: .5rem;
 }
 
 
