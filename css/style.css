@@ -122,6 +122,10 @@ li, a, button {
     text-align: center
 }
 
+.nav-mode:hover{
+    cursor: pointer;
+}
+
 .nav-mode svg{
     display: block;
     margin: auto;
