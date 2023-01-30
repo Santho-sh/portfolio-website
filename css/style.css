@@ -281,17 +281,29 @@ li, a, button {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-
+    
     box-shadow: var(--box-shadow);
+}
+
+.social-links-footer{
+    display: flex;
+    gap: .7rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links-footer svg{
     color: var(--font-color-two);
-    margin-right: .7rem;
+    justify-content: center;
     width: 1.1rem;
-    height: auto;
     transition: var(--hover-transition);
     cursor: pointer;
+}
+
+.social-links-footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .social-links-footer svg:hover{
@@ -420,7 +432,7 @@ li, a, button {
 
     display: flex;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     color: var(--font-color-one);
 }
 
