@@ -3,8 +3,8 @@
 
 :root{
 
-    --body-color: #121212;
-    --nav-background: rgba(50, 50, 50, 0.445);
+    --body-color: #000000;
+    --nav-background: rgba(30, 30, 30, 0.445);
     --font-color-one: rgb(255, 255, 255);
     --font-color-two: rgb(128, 115, 115);
     /* other fav color; #0DCEDA */
