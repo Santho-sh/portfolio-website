@@ -521,6 +521,7 @@ button{
     width: 100%;
     max-width: 30rem;
     border: none;
+    color: var(--font-color-one);
     background-color: var(--nav-background);
     border-radius: var(--radius);
 
